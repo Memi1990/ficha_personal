@@ -86,6 +86,13 @@
         app:layout_constraintGuide_begin="567dp"
         app:layout_constraintGuide_percent="0.80" />
 
+    <android.support.constraint.Guideline
+        android:id="@+id/gdMarginLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10" />
+
     <TextView
         android:id="@+id/tvTittle"
         android:layout_width="wrap_content"
@@ -103,20 +110,22 @@
         android:text="@string/name"
         app:layout_constraintBottom_toTopOf="@+id/gdNameA"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/gdMarginLeft"
         app:layout_constraintTop_toTopOf="@+id/gdTittle" />
 
     <EditText
         android:id="@+id/etPersonName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/escribe"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/gdNameA" />
+        app:layout_constraintStart_toStartOf="@+id/gdMarginLeft"
+        app:layout_constraintTop_toTopOf="@+id/gdNameA"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <TextView
         android:id="@+id/textView3"
@@ -139,10 +148,27 @@
         android:id="@+id/rgSexo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/gdRadioB"
         app:layout_constraintEnd_toStartOf="@+id/guideline11"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/gdEdad" />
+        app:layout_constraintStart_toStartOf="@+id/gdMarginLeft"
+        app:layout_constraintTop_toTopOf="@+id/gdEdad">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/h"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/m" />
+    </RadioGroup>
 
     <Spinner
         android:id="@+id/spAge"
@@ -162,20 +188,21 @@
         android:text="@string/tel"
         app:layout_constraintBottom_toTopOf="@+id/gdTel"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/gdMarginLeft"
         app:layout_constraintTop_toTopOf="@+id/gdRadioB" />
 
     <EditText
         android:id="@+id/etPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/escribe"
         android:inputType="phone"
         android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/gdReadTel"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/gdMarginLeft"
         app:layout_constraintTop_toTopOf="@+id/gdTel" />
 
     <TextView
@@ -185,20 +212,21 @@
         android:text="@string/mail"
         app:layout_constraintBottom_toTopOf="@+id/gdMail"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/gdMarginLeft"
         app:layout_constraintTop_toTopOf="@+id/gdReadTel" />
 
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/escribe"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/gdReadMail"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/gdMarginLeft"
         app:layout_constraintTop_toTopOf="@+id/gdMail" />
 
     <Button

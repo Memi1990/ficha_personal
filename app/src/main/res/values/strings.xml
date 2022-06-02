@@ -7,4 +7,6 @@
     <string name="edad">Indica tu edad</string>
     <string name="add">AÑADIR</string>
     <string name="send">ENVIAR</string>
+    <string name="h">Hombre</string>
+    <string name="m">Mujer</string>
 </resources>
