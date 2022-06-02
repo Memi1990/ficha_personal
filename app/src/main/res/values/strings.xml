@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Ficha Personal</string>
+    <string name="name">Introduce tu nombre completo</string>
+    <string name="escribe">Escribe aquí</string>
+    <string name="tel">Introduce tu teléfono</string>
+    <string name="mail">Introduce tu dirección e-mail</string>
+    <string name="edad">Indica tu edad</string>
+    <string name="add">AÑADIR</string>
+    <string name="send">ENVIAR</string>
+</resources>
