@@ -14,6 +14,9 @@
         android:theme="@style/Theme.FormPersonal"
         tools:targetApi="31">
         <activity
+            android:name=".fichaActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
